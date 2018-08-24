@@ -2,11 +2,11 @@
 Current stage: Alpha 0.0.3
 
 ## Mission
-The mission of OpenUtau is to create a open source editing environment for UTAU community, with modern user experience and intelligent phonological support. The ultimate goal is to make UTAU technology better and more popular.
+The mission of OpenUtau is to create a open source editing environment for the UTAU community, with a modern user experience and intelligent phonological support. The ultimate goal is to make UTAU better and more popular.
 
 ## Scope
 #### The scope of OpenUtau includes:
-- Modern uUI.
+- Modern UI.
 - Compatibility with UTAU.
 - Intelligent VCV, CVVC and other voicebank styles support.
 - Internationalization, including UI translation and file system encoding support.
