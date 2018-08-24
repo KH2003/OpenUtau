@@ -6,19 +6,19 @@ The mission of OpenUtau is to create a open source editing environment for UTAU 
 
 ## Scope
 #### The scope of OpenUtau includes:
-- Modern user experience.
-- Compatibility with UTAU technologies.
-- Intelligent VCV, CVVC an other voicebank sampling technique support.
+- Modern uUI.
+- Compatibility with UTAU.
+- Intelligent VCV, CVVC and other voicebank styles support.
 - Internationalization, including UI translation and file system encoding support.
-- Smooth preview/rendering experience.
-- A easy to use plugin system.
+- A Smooth preview/rendering experience.
+- An easy to use plugin system.
 - An efficient sample connecting engine (a.k.a. wavetool).
 - A Windows version.
 
 #### The scope of OpenUtau does not include:
-- Resampling engines (a.k.a resampler).
-- Full feature digital music workstation.
-- OpenUtau does not strike for Vocaliod compatibility, other than limited features.
+- Resampling engines (a.k.a a resampler).
+- Fully featured DAW.
+- OpenUtau does not aim for VOCALOID compatibility, other than limited features.
 
 #### The scope of OpenUtau may include:
 - An efficient resampling engine interface.
