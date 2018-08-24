@@ -10,7 +10,7 @@
             <TreeViewItem x:Name="generalItem" Header="{DynamicResource General}"/>
 
             <TreeViewItem x:Name="bpmItem" Header="BPM"/>
-            <TreeViewItem x:Name="expItem" Header="Expreesion"/>
+            <TreeViewItem x:Name="expItem" Header="Expression"/>
         </TreeView>
         <Grid x:Name="generalGrid" Margin="170,2,10,10" Visibility="Collapsed">
             <Label Content="{DynamicResource ResourceKey=Name}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>

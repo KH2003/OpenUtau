@@ -20,8 +20,8 @@
 
     <Color x:Key="TimelineColorNormal">#1c1c1c</Color>
 
-    <Color x:Key="TickLineColorLight">#dadada</Color>
-    <Color x:Key="TickLineColorDark">#979797</Color>
+    <Color x:Key="TickLineColorLight">#a8a8a8</Color>
+    <Color x:Key="TickLineColorDark">#696969</Color>
     <Color x:Key="BarNumberColor">#979797</Color>
 
     <!--Keyboard Background-->
