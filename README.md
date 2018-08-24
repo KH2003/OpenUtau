@@ -10,7 +10,7 @@ The mission of OpenUtau is to create a open source editing environment for the U
 - Compatibility with UTAU.
 - Intelligent VCV, CVVC and other voicebank styles support.
 - Internationalization, including UI translation and file system encoding support.
-- A Smooth preview/rendering experience.
+- A smooth preview/rendering experience.
 - An easy to use plugin system.
 - An efficient sample connecting engine (a.k.a. wavetool).
 - A Windows version.
