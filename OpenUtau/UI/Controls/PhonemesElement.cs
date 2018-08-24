@@ -128,12 +128,14 @@ namespace OpenUtau.UI.Controls
 
         protected override void AddToFormattedTextPool(string text)
         {
+            var pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
             var fText = new FormattedText(
                     text,
                     System.Threading.Thread.CurrentThread.CurrentUICulture,
                     FlowDirection.LeftToRight, SystemFonts.CaptionFontFamily.GetTypefaces().First(),
                     12,
-                    Brushes.Black);
+                    Brushes.Black,
+                    pixelsPerDip);
             fTextPool.Add(text, fText);
             fTextWidths.Add(text, fText.Width);
             fTextHeights.Add(text, fText.Height);

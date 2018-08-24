@@ -21,12 +21,12 @@
                 <MenuItem Header="{DynamicResource MenuNew}" InputGestureText="Ctrl+N" Click="MenuNew_Click"/>
                 <MenuItem Header="{DynamicResource MenuOpen}" InputGestureText="Ctrl+O" Click="MenuOpen_Click"/>
                 <MenuItem Header="{DynamicResource MenuOpenAs}">
-                    <MenuItem Header="Ustx..."/>
-                    <MenuItem Header="Vsqx..."/>
-                    <MenuItem Header="Ust (ANSI)..."/>
-                    <MenuItem Header="Ust (UTF-8)..."/>
-                    <MenuItem Header="Ust (GB2312)..."/>
-                    <MenuItem Header="Ust (Shift-JIS)..."/>
+                    <MenuItem Header="USTx..."/>
+                    <MenuItem Header="VSQx..."/>
+                    <MenuItem Header="UST (ANSI)..."/>
+                    <MenuItem Header="UST (UTF-8)..."/>
+                    <MenuItem Header="UST (GB2312)..."/>
+                    <MenuItem Header="UST (Shift-JIS)..."/>
                 </MenuItem>
                 <MenuItem Header="{DynamicResource MenuSave}" InputGestureText="Ctrl+S" Click="MenuSave_Click"/>
                 <MenuItem Header="{DynamicResource MenuSaveAs}" Click="MenuSaveAs_Click"/>
@@ -36,14 +36,14 @@
                     <MenuItem Header="{DynamicResource MenuImportMidi}" Click="MenuImportMidi_Click"/>
                 </MenuItem>
                 <MenuItem Header="{DynamicResource MenuExport}">
-                    <MenuItem Header="Ust" Click="MenuExportUst_Click"/>
+                    <MenuItem Header="UST" Click="MenuExportUst_Click"/>
                     <MenuItem Header="{DynamicResource MenuRenderAll}" Click="MenuRenderAll_Click"/>
                 </MenuItem>
                 <MenuItem Header="{DynamicResource MenuRecentFile}" IsEnabled="False">
                     <MenuItem Header="1.vsqx"/>
                     <MenuItem Header="2.vsqx"/>
                 </MenuItem>
-                <MenuItem Header="Clear cache" Click="MenuClearCache_Click"/>
+                <MenuItem Header="Clear Cache" Click="MenuClearCache_Click"/>
                 <MenuItem Header="{DynamicResource MenuExit}" InputGestureText="Alt+F4" Click="MenuExit_Click"/>
             </MenuItem>
             <MenuItem Header="{DynamicResource MenuEdit}">
@@ -98,11 +98,11 @@
                 </Grid>
                 <Grid x:Name="playbackButtonGrid" Height="20" Width="108" HorizontalAlignment="Left" Margin="74,0,0,0">
                     <Button x:Name="seekHomeButton" Style="{StaticResource SeekHomeButtonStyle}" Margin="4,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="seekHomeButton_Click"/>
-                    <Button x:Name="stopButton" Style="{StaticResource StopButtonStyle}" Margin="24,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    <Button x:Name="stopButton" Style="{StaticResource StopButtonStyle}" Margin="23,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                             Click="stopButton_Click"/>
-                    <Button x:Name="playButton" Style="{StaticResource PlayButtonStyle}" Margin="44,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    <Button x:Name="playButton" Style="{StaticResource PlayButtonStyle}" Margin="45,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                             Click="playButton_Click"/>
-                    <Button x:Name="pauseButton" Style="{StaticResource PauseButtonStyle}" Margin="64,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    <Button x:Name="pauseButton" Style="{StaticResource PauseButtonStyle}" Margin="65,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                             Click="pauseButton_Click"/>
                     <Button x:Name="seekEndButton" Style="{StaticResource SeekEndButtonStyle}" Margin="84,0,0,0" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Click="seekEndButton_Click"/>
                     <Border CornerRadius="4" BorderThickness="1" BorderBrush="LightGray"/>
@@ -176,7 +176,7 @@
                     </Border>
                 </Grid>
             </Grid>
-            <Grid x:Name="toolGrid" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="250" Margin="256,0,0,0">
+            <Grid x:Name="toolGrid" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="256" Margin="248,0,0,0">
                 <RadioButton x:Name="radioToolCursor" HorizontalAlignment="Left" Width="20" Style="{DynamicResource ToolRadioButton}" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GroupName="ToolGroup" IsChecked="True" Margin="5,0,0,0">
                     <RadioButton.Content>
                         <Rectangle Width="15" Height="15" Fill="{Binding Foreground, ElementName=radioToolCursor}" Stretch="Uniform">
@@ -197,7 +197,7 @@
                 </RadioButton>
             </Grid>
         </Grid>
-        <ProgressBar x:Name="progrss" Style="{StaticResource WindowBottomProgressBarStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
+        <ProgressBar x:Name="progress" Style="{StaticResource WindowBottomProgressBarStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
                      Margin="0,0,0,0" Height="5" Value="{Binding Progress, FallbackValue=0, Source={StaticResource progVM}}"
                      Foreground="{Binding Foreground, Source={StaticResource progVM}}" IsIndeterminate="{Binding IsIndeterminate, Source={StaticResource progVM}}"/>
         <TextBlock x:Name="progressText" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="4,0,4,5"

@@ -84,8 +84,8 @@
                         <Ellipse x:Name="ellipseBackground">
                             <Ellipse.Fill>
                                 <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                                    <GradientStop Color="#61B3F2" Offset="0.0"/>
-                                    <GradientStop Color="#4EA6EA" Offset="1.0"/>
+                                    <GradientStop Color="#ff90b2" Offset="0.0"/>
+                                    <GradientStop Color="#ff6193" Offset="1.0"/>
                                 </LinearGradientBrush>
                             </Ellipse.Fill>
                         </Ellipse>
