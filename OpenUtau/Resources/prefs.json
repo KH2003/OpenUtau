@@ -6,22 +6,23 @@
     "MidiHeight": 768,
 	"MidiMaximized": false,
     "UndoLimit": 100,
-	"MultiThreadLimit": 5,
+	"MultiThreadLimit": 6,
     "SingerSearchPaths": [
-        "Singers"
+        "Singers",
+		"C:\\Program Files (x86)\\UTAU\\voice"
     ],
-	"EnterToEdit":false,
+	"EnterToEdit": false,
 	"RenderNoteAtInstant": false,
 	"AutoConvertStyles": false,
 	"RenderManager": "PreRender",
 	"WavePlayer": "WaveOut",
-    "InternalEnginePreview": true,
-    "InternalEngineExport": true,
-    "ExternalPreviewEngine": "",
-  "ExternalExportEngine": "",
+    "InternalEnginePreview": false,
+    "InternalEngineExport": false,
+    "ExternalPreviewEngine": "resampler.exe",
+	"ExternalExportEngine": "resampler.ee",
     "ScriptWavtool": "",
-  "Language": "en-us",
-    "UseScript": false, 
-  "SamplingRate": 44100,
-  "BitDepth":  16
+	"Language": "en-us",
+	"UseScript": false, 
+	"SamplingRate": 44100,
+	"BitDepth": 16
 }

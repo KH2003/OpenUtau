@@ -153,7 +153,7 @@ namespace OpenUtau.Core.Render.NAudio
 
 
             if (count % bytesPerSample != 0)
-                ;//throw new ArgumentException("Must read an whole number of samples", "count");
+            throw new ArgumentException("Must read an whole number of samples", "count");
 
             // blank the buffer
             Array.Clear(buffer, offset, count);
