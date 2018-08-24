@@ -140,13 +140,14 @@ namespace OpenUtau.UI.Controls
                 double x2 = Math.Round(ScaleX * Part.DurTick);
                 double partValueHeight = Math.Round(VisualHeight - VisualHeight * (data - min) / (max - min));
                 double partZeroHeight = Math.Round(VisualHeight - VisualHeight * (de - min) / (max - min));
+                var pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
                 cxt.DrawLine(pen5, new Point(x1 + 0.5, partZeroHeight + 0.5), new Point(x1 + 0.5, partValueHeight + 3));
                 //cxt.DrawEllipse(Brushes.White, pen2, new Point(x1 + 0.5, partValueHeight), 2.5, 2.5);
                 cxt.PushTransform(new RotateTransform(45, x1 + 0.5, partValueHeight + 0.5));
                 cxt.DrawRectangle(Brushes.White, pen2, new Rect(x1 + 0.5 - PartSquarePointSide / 2, partValueHeight - PartSquarePointSide / 2, PartSquarePointSide, PartSquarePointSide));
                 cxt.Pop();
                 cxt.DrawLine(pen4, new Point(x1 + 3, partValueHeight), new Point(Math.Max(x1 + 3, x2 - 3), partValueHeight));
-                cxt.DrawText(new FormattedText(data.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color)), new Point(x1 + 3, partValueHeight));
+                cxt.DrawText(new FormattedText(data.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color), pixelsPerDip), new Point(x1 + 3, partValueHeight));
                 foreach (UNote note in Part.Notes)
                 {
                     if (!midiVM.NoteIsInView(note)) continue;
@@ -160,7 +161,7 @@ namespace OpenUtau.UI.Controls
                         cxt.DrawLine(pen3, new Point(noteX1 + 0.5, zeroHeight + 0.5), new Point(noteX1 + 0.5, valueHeight + 3));
                         cxt.DrawEllipse(Brushes.White, pen2, new Point(noteX1 + 0.5, valueHeight), 2.5, 2.5);
                         cxt.DrawLine(pen2, new Point(noteX1 + 3, valueHeight), new Point(Math.Max(noteX1 + 3, noteX2 - 3), valueHeight));
-                        cxt.DrawText(new FormattedText(nD.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color)), new Point(noteX1 + 3, valueHeight));
+                        cxt.DrawText(new FormattedText(nD.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color), pixelsPerDip), new Point(noteX1 + 3, valueHeight));
                     }
                 }
             }
@@ -219,9 +220,10 @@ namespace OpenUtau.UI.Controls
                 }
                 double x1 = 0;
                 double x2 = Math.Round(ScaleX * Part.DurTick);
+                var pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
                 cxt.DrawLine(pen5, new Point(x1 + 0.5, 0.5), new Point(x1 + 0.5, VisualHeight + 3));
                 if (data) cxt.DrawRectangle(pen4.Brush, null, new Rect(new Point(x1 + 1.5, 0.5), new Point(Math.Max(x1 + 3, x2 - 3), VisualHeight)));
-                cxt.DrawText(new FormattedText(data.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color)), new Point(x1 + 3, VisualHeight));
+                cxt.DrawText(new FormattedText(data.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color), pixelsPerDip), new Point(x1 + 3, VisualHeight));
                 foreach (UNote note in Part.Notes)
                 {
                     if (!midiVM.NoteIsInView(note)) continue;
@@ -232,7 +234,7 @@ namespace OpenUtau.UI.Controls
                         double noteX2 = Math.Round(ScaleX * note.EndTick);
                         cxt.DrawLine(pen3, new Point(noteX1 + 0.5, 0.5), new Point(noteX1 + 0.5, VisualHeight + 3));
                         if (nD) cxt.DrawRectangle(pen2.Brush, null, new Rect(new Point(noteX1 + 3, 0.5), new Point(Math.Max(noteX1 + 3, noteX2 - 3), VisualHeight)));
-                        cxt.DrawText(new FormattedText(nD.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color)), new Point(noteX1 + 3, VisualHeight - 24));
+                        cxt.DrawText(new FormattedText(nD.ToString(), System.Globalization.CultureInfo.CurrentCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 12, new SolidColorBrush(ThemeManager.NoteFillBrushes[0].Color), pixelsPerDip), new Point(noteX1 + 3, VisualHeight - 24));
                     }
                 }
             }

@@ -99,6 +99,7 @@ namespace OpenUtau.UI.Controls
             int alt = firstTrack;
             int aalt = UIConstants.MaxNoteNum - alt - 1;
             double top = TrackHeight * firstTrack - OffsetY;
+            var pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
 
             while (top < _size.Height)
             {
@@ -117,7 +118,8 @@ namespace OpenUtau.UI.Controls
                         SystemFonts.CaptionFontFamily.GetTypefaces().First(),
                         12,
                         MusicMath.IsBlackKey(aalt) ? ThemeManager.BlackKeyNameBrushNormal :
-                        MusicMath.IsCenterKey(aalt) ? ThemeManager.CenterKeyNameBrushNormal : ThemeManager.WhiteKeyNameBrushNormal
+                        MusicMath.IsCenterKey(aalt) ? ThemeManager.CenterKeyNameBrushNormal : ThemeManager.WhiteKeyNameBrushNormal,
+                        pixelsPerDip
                     );
                     drawingContext.DrawText(text, new Point(42 - text.Width, (int)(top + (TrackHeight - text.Height) / 2)));
                 }
@@ -248,6 +250,7 @@ namespace OpenUtau.UI.Controls
             int tick = (int)((OffsetX + QuarterOffset * QuarterWidth) / interval);
             double left = tick * interval - OffsetX - QuarterOffset * QuarterWidth;
             bool first_tick = true;
+            var pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
 
             while (left < _size.Width)
             {
@@ -265,7 +268,8 @@ namespace OpenUtau.UI.Controls
                             System.Threading.Thread.CurrentThread.CurrentUICulture,
                             FlowDirection.LeftToRight, SystemFonts.CaptionFontFamily.GetTypefaces().First(),
                             12,
-                            darkPen.Brush);
+                            darkPen.Brush,
+                            pixelsPerDip);
                         fTextPool.Add(barNumber, fText);
                     }
                     else fText = fTextPool[barNumber];
@@ -281,17 +285,19 @@ namespace OpenUtau.UI.Controls
                             System.Threading.Thread.CurrentThread.CurrentUICulture,
                             FlowDirection.LeftToRight, SystemFonts.CaptionFontFamily.GetTypefaces().First(),
                             12,
-                            darkPen.Brush);
+                            darkPen.Brush,
+                            pixelsPerDip);
                         fTextPoolSubBpm.Add((int)(tick * zoomRatio * Resolution), fText);
                     }
                     else if (!fTextPoolSubBpm[(int)(tick * zoomRatio * Resolution)].Text.Equals(DocManager.Inst.Project.SubBPM[(int)(tick * zoomRatio * Resolution)].ToString()))
                     {
                         fText = new FormattedText(
-    DocManager.Inst.Project.SubBPM[(int)(tick * zoomRatio * Resolution)].ToString(),
-    System.Threading.Thread.CurrentThread.CurrentUICulture,
-    FlowDirection.LeftToRight, SystemFonts.CaptionFontFamily.GetTypefaces().First(),
-    12,
-    darkPen.Brush);
+                            DocManager.Inst.Project.SubBPM[(int)(tick * zoomRatio * Resolution)].ToString(),
+                            System.Threading.Thread.CurrentThread.CurrentUICulture,
+                            FlowDirection.LeftToRight, SystemFonts.CaptionFontFamily.GetTypefaces().First(),
+                            12,
+                            darkPen.Brush,
+                            pixelsPerDip);
                         fTextPoolSubBpm[(int)(tick * zoomRatio * Resolution)]= fText;
                     }
                     else fText = fTextPoolSubBpm[(int)(tick * zoomRatio * Resolution)];

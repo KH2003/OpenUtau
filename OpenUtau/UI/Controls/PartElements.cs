@@ -108,6 +108,7 @@ namespace OpenUtau.UI.Controls
 
         public virtual void RedrawName()
         {
+            var pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
             DrawingContext cxt = nameVisual.RenderOpen();
             FormattedText text = new FormattedText(
                 Part.Name,
@@ -115,7 +116,8 @@ namespace OpenUtau.UI.Controls
                 FlowDirection.LeftToRight,
                 SystemFonts.CaptionFontFamily.GetTypefaces().First(),
                 12,
-                Brushes.White
+                Brushes.White,
+                pixelsPerDip
             );
             text.SetFontWeight(FontWeights.Medium);
             cxt.DrawText(text, new Point(3, 2));
@@ -125,13 +127,15 @@ namespace OpenUtau.UI.Controls
         public virtual void RedrawComment()
         {
             DrawingContext cxt = commentVisual.RenderOpen();
+            var pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
             FormattedText text = new FormattedText(
                 Part.Comment,
                 System.Threading.Thread.CurrentThread.CurrentUICulture,
                 FlowDirection.LeftToRight,
                 SystemFonts.CaptionFontFamily.GetTypefaces().First(),
                 12,
-                Brushes.White
+                Brushes.White,
+                pixelsPerDip
             );
             text.SetFontWeight(FontWeights.Regular);
             cxt.DrawText(text, new Point(3, 18));
@@ -149,6 +153,7 @@ namespace OpenUtau.UI.Controls
         }
 
         protected bool _modified = false;
+
         public virtual bool Modified { set => _modified = value;
             get => _modified;
         }

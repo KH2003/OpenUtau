@@ -13,8 +13,10 @@ namespace OpenUtau.Core
         const string VersionUrl = "https://raw.githubusercontent.com/stakira/OpenUtau/master/README.md";
         public static bool Check()
         {
+            return false;
+
+            /***
             string result;
-            
             try
             {
                 using (WebClient client = new WebClient())
@@ -37,6 +39,7 @@ namespace OpenUtau.Core
                 return latestVer != thisVer;
             }
             else return false;
+            **/
         }
     }
 }
