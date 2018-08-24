@@ -8,7 +8,7 @@
 	"UndoLimit": 100,
 	"MultiThreadLimit": 6,
 	"SingerSearchPaths": [
-        "Singers",
+		"Singers",
 		"C:\\Program Files (x86)\\UTAU\\voice"
 	],
 	"EnterToEdit": false,
