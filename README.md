@@ -1,5 +1,5 @@
 # OpenUtau
-Current stage: Alpha 0.0.3
+Current version: Alpha 0.0.3
 
 ## Mission
 The mission of OpenUtau is to create a open source editing environment for the UTAU community, with a modern user experience and intelligent phonological support. The ultimate goal is to make UTAU better and more popular.
