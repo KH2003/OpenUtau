@@ -18,7 +18,7 @@ The mission of OpenUtau is to create a open source editing environment for the U
 #### The scope of OpenUtau does not include:
 - Resampling engines (a.k.a a resampler).
 - Fully featured DAW.
-- OpenUtau does not aim for VOCALOID compatibility, other than limited features.
+- OpenUtau does not strive VOCALOID compatibility, other than limited features.
 
 #### The scope of OpenUtau may include:
 - An efficient resampling engine interface.
