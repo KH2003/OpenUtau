@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUtau", "OpenUtau\OpenUtau.csproj", "{D951492F-0901-4296-AE7F-831430C07FA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenUtauTests", "OpenUtauTests\OpenUtauTests.csproj", "{714AE6E2-8CD0-479A-A5E8-B277263A6388}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,14 +21,6 @@ Global
 		{D951492F-0901-4296-AE7F-831430C07FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D951492F-0901-4296-AE7F-831430C07FA9}.Release|x64.ActiveCfg = Release|x64
 		{D951492F-0901-4296-AE7F-831430C07FA9}.Release|x64.Build.0 = Release|x64
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Debug|x64.Build.0 = Debug|Any CPU
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Release|Any CPU.Build.0 = Release|Any CPU
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Release|x64.ActiveCfg = Release|Any CPU
-		{714AE6E2-8CD0-479A-A5E8-B277263A6388}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
